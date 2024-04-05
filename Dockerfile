@@ -1,16 +1,26 @@
 FROM node:16-alpine
-MAINTAINER totalplatform "info@totaljs.com"
+
 
 VOLUME /www
 WORKDIR /www
-RUN mkdir -p /www/bundles
+
+RUN chown -R 777 /www
 
 COPY index.js .
 COPY config .
 COPY package.json .
-COPY app.bundle ./bundles/
+COPY  app.bundle ./bundles/
 
-RUN npm install
-EXPOSE 8000
+RUN npm install --unsafe-perm --no-update-notifier --no-fund --only=production
+
+
+COPY . .
+RUN chmod 777 node_modules
+RUN chmod -R 775 /www/  
+
+
+
+
+EXPOSE $PORT
 
 CMD [ "npm", "start" ]
