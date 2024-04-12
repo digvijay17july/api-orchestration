@@ -35,7 +35,6 @@ function init(id, next) {
 	flow.directory = CONF.directory || PATH.root('/flowstream/');
 	flow.sandbox = CONF.flowstream_sandbox == true;
 	flow.env = PREF.env || 'dev';
-
 	if (!flow.memory)
 		flow.memory = CONF.flowstream_memory || 0;
 

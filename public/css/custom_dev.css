@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "SfProRegular";
+    src:
+        url("../fonts/SF-Pro-Display-Regular.woff") format("woff"),
+        /* url("../fonts/SF-Pro-Display-Regular.otf") format("opentype"); */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'SfProRegular' !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-family: 'SfProRegular' !important;
+}

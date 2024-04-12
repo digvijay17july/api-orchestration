@@ -10,7 +10,9 @@
 	<meta name="robots" content="all,follow" />
 	@{import('spa.min@19.css', 'spa.min@19.js')}
 	<script src="@{REPO.ui}"></script>
-	@{import('meta', 'head', 'default.css + editor.min@1.css + editor.css', 'filesaver.min.js + editor.min@1.js + uibuilder.min@1.js + editor.js + func.js', 'favicon.ico')}
+	@{import('meta', 'head', 'default.css + editor.min@1.css + editor.css', 'filesaver.min.js + editor.min@1.js + editor.js + func.js', 'favicon.ico')}
+		@{import('custom_dev.css')}
+		@{import('meta', 'head', 'logo.png')}
 </head>
 <body@{if PREF.darkmode} class="ui-dark"@{fi}>
 
